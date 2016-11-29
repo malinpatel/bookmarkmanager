@@ -3,7 +3,7 @@
 feature "Storing website links" do
 
   scenario "See a list of saved links" do
-    Link.create(url: 'http://www.makersacademy,com', title: 'Makers Academy')
+    Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
     visit '/links'
     expect(page.status_code).to eq 200
     within 'ul#links' do
