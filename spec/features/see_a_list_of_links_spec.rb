@@ -1,5 +1,4 @@
 
-
 feature "Storing website links" do
 
   scenario "See a list of saved links" do
