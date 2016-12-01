@@ -24,7 +24,11 @@
       <% @links.each do |link| %>
       <p>
         <li><strong>Title:</strong> <%= link.title  %> =>
-          <strong>URL:</strong> <%= link.url %></li>
+          <strong>URL:</strong> <%= link.url %>
+
+          <strong>Tag:</strong><% link.tags.each do |tag| %>
+             <%= tag.name %>, <% end %>
+        </li>
         </p>
         <% end %>
       </ul>
