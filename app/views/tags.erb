@@ -16,10 +16,14 @@
     </ul>
   </nav>
 
+  <div class='view_tags'>
   <h1>Link that contain <%= @name %> </h1>
+  <ul>
   <% @links.each do |link| %>
-      Title: <%= link.title %>
-      URL: <%= link.url %>
+      <li><strong>Title:</strong> <%= link.title %> =>
+      <strong>URL: </strong> <%= link.url %></li>
   <% end %>
+</ul>
+</div>
 </body>
 </html>
