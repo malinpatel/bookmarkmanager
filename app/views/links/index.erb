@@ -20,7 +20,7 @@
 
   <div class='view_links'>
     <h1> BOOKMARKS </h1></br>
-    <h2> Welcome <%= @user ? @user.email : "somebody" %> </h2> </br>
+    <h1> Welcome <%= @user ? @user.email : "Visitor!"  %> </h1> </br>
     <ul id='links'>
       <% @links.each do |link| %>
       <p>

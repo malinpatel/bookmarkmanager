@@ -29,6 +29,6 @@ feature 'User sign up' do
     fill_in :email, with: email
     fill_in :password, with: password
     fill_in :password_again, with: password_again
-    click_button "Sign up!"
+    click_button "Sign up"
   end
 end

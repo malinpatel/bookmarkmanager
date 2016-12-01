@@ -27,7 +27,7 @@ class BookmarkManager < Sinatra::Base
   post '/sign_up' do
     user = User.new(params)
     session[:user_id] = user.id
-    redirect '/links'
+    redirect '/links' unless user.nil?
   end
 
   get '/tags/:name' do

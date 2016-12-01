@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica;
-  background-image: url("light.jpg");
+  background-image: url("turq.jpg");
   color: #312f2c;
 }
 
@@ -108,7 +108,7 @@ nav li {
   height: 25px;
   float: left;
   margin-right: 0px;
-  border-right: 1px solid #aaa;
+  border-right: 1px solid #e5fafa;
   padding: 0 20px;
 }
 
@@ -129,12 +129,12 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #41a990;
+  color: #006768;
 }
 
 nav li.active a {
   font-weight: bold;
-  color: #333;
+  color: #b2f0f1;
 }
 
 
