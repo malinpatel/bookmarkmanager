@@ -12,6 +12,5 @@ feature 'filtering by tags' do
     # within 'ul#links' do
       expect(page).to have_content('Facebook')
       expect(page).not_to have_content('Makers Academy')
-    # end
+    end
   end
-end

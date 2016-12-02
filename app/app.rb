@@ -31,6 +31,14 @@ class BookmarkManager < Sinatra::Base
     erb :'links/tags'
   end
 
+  get '/sign_up_form' do
+    erb :sign_up_form
+  end
+
+  post '/sign_up_form' do
+    redirect to('/links')
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

@@ -1,4 +1,5 @@
 require 'spec_helper.rb'
+require './app/models/user.rb'
 
 feature "Homepage", :feature => :type do
   scenario "see list of links on homepage" do
@@ -12,5 +13,13 @@ feature "Homepage", :feature => :type do
     within 'ul#links' do
       expect(page).to have_content ("Makers Academy")
     end
+  end
+
+  describe User do
+    subject (:user) {described_class.new}
+      it 'user count increases after signing up' do
+        sign_up
+        expect{user.increment}.to change{user.count}.by(1)
+      end
   end
 end
