@@ -1,39 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Bookmark manager</title>
+<div class='view_links'>
+  <h1> BOOKMARKS </h1></br>
+  <ul id='links'>
+    <% @links.each do |link| %>
+    <p>
+      <li><strong>Title:</strong> <%= link.title  %> =>
+        <strong>URL:</strong> <%= link.url %>
 
-  <link rel='stylesheet' type='text/css' href='/css/style.css'>
-</head>
-
-<body>
-  <nav>
-    <ul>
-      <li> <a href="/">Bookmark Manager </a></li>
-      <li> <a href='links'>View links </a></li>
-      <li> <a href="/links/new"> Add link </a></li>
-      <li > <a href="/sign_up"> Sign up </a></li>
-      <li> <a href="#"> Sign in </a></li>
+        <strong>Tag:</strong><% link.tags.each do |tag| %>
+           <%= tag.name %>, <% end %>
+      </li>
+      </p>
+      <% end %>
     </ul>
-  </nav>
-
-
-  <div class='view_links'>
-    <h1> BOOKMARKS </h1></br>
-    <h1> Welcome <%= @user ? @user.email : "Visitor!"  %> </h1> </br>
-    <ul id='links'>
-      <% @links.each do |link| %>
-      <p>
-        <li><strong>Title:</strong> <%= link.title  %> =>
-          <strong>URL:</strong> <%= link.url %>
-
-          <strong>Tag:</strong><% link.tags.each do |tag| %>
-             <%= tag.name %>, <% end %>
-        </li>
-        </p>
-        <% end %>
-      </ul>
-    </div>
-
-  </body>
-  </html>
+  </div>
